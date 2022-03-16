@@ -11,6 +11,7 @@ local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightne
 local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local wibox = require("wibox")
+local separator = wibox.widget.textbox()
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -70,17 +71,17 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
+--    awful.layout.suit.tile.left,
+--    awful.layout.suit.tile.bottom,
+--    awful.layout.suit.tile.top,
+--    awful.layout.suit.fair,
+--    awful.layout.suit.fair.horizontal,
+--    awful.layout.suit.spiral,
+--    awful.layout.suit.spiral.dwindle,
+--    awful.layout.suit.max,
+--    awful.layout.suit.max.fullscreen,
+--    awful.layout.suit.magnifier,
+--    awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -224,20 +225,22 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
+	   layout = wibox.layout.fixed.horizontal,
 	    spotify_widget({
-                    play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
-                    pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
+                    play_icon = '/usr/share/icons/Arc/actions/24/player_pause.png',
+                    pause_icon = '/usr/share/icons/Arc/actions/24/player_pause.png',
                     dim_when_paused = true,
                     dim_opacity = 0.5,
-                    max_length = -1,
-                    show_tooltip = false
+                    show_tooltip = false,
+		    font = 'Hack Nerd Font Bold 10',
+		    max_length = 20,
             }),
+	   layout = wibox.layout.fixed.horizontal,
 	    batteryarc_widget({
                     show_current_level = true,
                     arc_thickness = 2,
@@ -251,14 +254,14 @@ awful.screen.connect_for_each_screen(function(s)
             brightness_widget({
                     type = 'icon_and_text',
                     program = 'light',
-                    step = 2,
+                    step = 5,
                     percentage = true,
             }),   
 
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
             mytextclock,
-            s.mylayoutbox,
+            
         },
     }
 end)
@@ -362,6 +365,9 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
+    awful.key({ modkey, "Shift" },   "r",     function () awful.spawn("xfce4-terminal".. " -e ranger")  end,
+              {description = "run ranger", group = "launcher"}),
+
     awful.key({ modkey },            "r",     function () awful.util.spawn("rofi -show run") end,
               {description = "run rofi", group = "launcher"}),
 
@@ -623,4 +629,3 @@ awful.spawn.with_shell("nitrogen --restore")
 
 
 
--- Battery widget (import library at the top)
