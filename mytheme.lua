@@ -16,7 +16,7 @@ theme.font          = "Hack Nerd Font Bold 9"
 theme.bg_normal     = "#47b5ce"
 theme.bg_focus      = "#c2f8fa"
 theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.bg_minimize   = "#47b5ce"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#07538f"
