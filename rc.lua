@@ -12,6 +12,7 @@ local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local wibox = require("wibox")
 local separator = wibox.widget.textbox()
+local xrandr = require("xrandr")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -192,7 +193,14 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-
+--awful.tag.add("", {
+   -- icon               = "/usr/share/icons/Arc/apps/24/blueman.png",
+   -- layout             = awful.layout.suit.tile,
+   -- master_fill_policy = "master_width_factor",
+   -- gap_single_client  = true,
+   -- screen             = s,
+   -- selected           = true,
+--})
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
@@ -232,7 +240,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
 	   layout = wibox.layout.fixed.horizontal,
 	    spotify_widget({
-                    play_icon = '/usr/share/icons/Arc/actions/24/player_pause.png',
+                    play_icon = '/usr/share/icons/Arc/actions/24/player_play.png',
                     pause_icon = '/usr/share/icons/Arc/actions/24/player_pause.png',
                     dim_when_paused = true,
                     dim_opacity = 0.5,
@@ -277,6 +285,9 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+    awful.key({ modkey         }, "t", function () xrandr.xrandr() end,
+              {description = "change monitor config", group = "custom"}),
+
     awful.key({ modkey         }, ";", function () brightness_widget:inc() end,
               {description = "increase brightness", group = "custom"}),
     
