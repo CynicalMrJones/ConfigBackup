@@ -192,15 +192,42 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
---awful.tag.add("", {
-   -- icon               = "/usr/share/icons/Arc/apps/24/blueman.png",
-   -- layout             = awful.layout.suit.tile,
-   -- master_fill_policy = "master_width_factor",
-   -- gap_single_client  = true,
-   -- screen             = s,
-   -- selected           = true,
---})
+   -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9 " }, s, awful.layout.layouts[1])
+awful.tag.add("", {
+    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/firefox.png",
+    layout             = awful.layout.suit.tile,
+    master_fill_policy = "expand",
+    gap_single_client  = true,
+    screen             = s,
+    selected           = true,
+})
+
+awful.tag.add("", {
+    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/folder.png",
+    layout             = awful.layout.suit.tile,
+    master_fill_policy = "expand",
+    gap_single_client  = true,
+    screen             = s,
+    selected           = true,
+})
+
+awful.tag.add("", {
+    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/terminals.png",
+    layout             = awful.layout.suit.floating,
+    master_fill_policy = "expand",
+    gap_single_client  = true,
+    screen             = s,
+    selected           = true,
+})
+
+awful.tag.add("", {
+    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/spotify2.png",
+    layout             = awful.layout.suit.tile,
+    master_fill_policy = "expand",
+    gap_single_client  = true,
+    screen             = s,
+    selected           = true,
+})
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
@@ -561,7 +588,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false }
+      }, properties = { titlebars_enabled = true }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
@@ -601,9 +628,9 @@ client.connect_signal("request::titlebars", function(c)
 
     awful.titlebar(c) : setup {
         { -- Left
-            awful.titlebar.widget.iconwidget(c),
-            buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal
+           -- awful.titlebar.widget.iconwidget(c),
+           -- buttons = buttons,
+           layout  = wibox.layout.fixed.horizontal
         },
         { -- Middle
             { -- Title
@@ -614,16 +641,16 @@ client.connect_signal("request::titlebars", function(c)
             layout  = wibox.layout.flex.horizontal
         },
         { -- Right
-            awful.titlebar.widget.floatingbutton (c),
+           -- awful.titlebar.widget.floatingbutton (c),
             awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
+           -- awful.titlebar.widget.stickybutton   (c),
+           -- awful.titlebar.widget.ontopbutton    (c),
             awful.titlebar.widget.closebutton    (c),
             layout = wibox.layout.fixed.horizontal()
         },
         layout = wibox.layout.align.horizontal
     }
-end)
+  end)
 
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
@@ -631,6 +658,7 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
