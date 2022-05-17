@@ -203,6 +203,15 @@ awful.tag.add("", {
 })
 
 awful.tag.add("", {
+    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/terminals.png",
+    layout             = awful.layout.suit.tile,
+    master_fill_policy = "expand",
+    gap_single_client  = true,
+    screen             = s,
+    selected           = true,
+})
+
+awful.tag.add("", {
     icon               = "/home/juicy/Pictures/Icons/Awesome Icons/folder.png",
     layout             = awful.layout.suit.tile,
     master_fill_policy = "expand",
@@ -212,7 +221,7 @@ awful.tag.add("", {
 })
 
 awful.tag.add("", {
-    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/terminals.png",
+    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/archive.png",
     layout             = awful.layout.suit.floating,
     master_fill_policy = "expand",
     gap_single_client  = true,
@@ -222,7 +231,7 @@ awful.tag.add("", {
 
 awful.tag.add("", {
     icon               = "/home/juicy/Pictures/Icons/Awesome Icons/spotify2.png",
-    layout             = awful.layout.suit.tile,
+    layout             = awful.layout.suit.floating,
     master_fill_policy = "expand",
     gap_single_client  = true,
     screen             = s,
