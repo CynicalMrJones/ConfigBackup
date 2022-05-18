@@ -71,11 +71,11 @@ theme.menu_width  = dpi(100)
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = "~/Pictures/Icons/Awesome Icons/close.png"
+theme.titlebar_close_button_normal = "~/Pictures/Icons/Awesome Icons/close2.png"
 --theme.titlebar_close_button_normal = themes_path.."default/titlebar/close_normal.png"
 theme.titlebar_close_button_focus  = "~/Pictures/Icons/Awesome Icons/close.png"
 
-theme.titlebar_minimize_button_normal = "~/Pictures/Icons/Awesome Icons/minimize.png"
+theme.titlebar_minimize_button_normal = "~/Pictures/Icons/Awesome Icons/minimize2.png"
 theme.titlebar_minimize_button_focus  = "~/Pictues/Icons/AwesomeIcons/minimize.png"
 
 theme.titlebar_ontop_button_normal_inactive = themes_path.."default/titlebar/ontop_normal_inactive.png"
@@ -93,9 +93,9 @@ theme.titlebar_floating_button_focus_inactive  = themes_path.."default/titlebar/
 theme.titlebar_floating_button_normal_active = themes_path.."default/titlebar/floating_normal_active.png"
 theme.titlebar_floating_button_focus_active  = themes_path.."default/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = "~/Pictures/Icons/Awesome Icons/maximize.png"
+theme.titlebar_maximized_button_normal_inactive = "~/Pictures/Icons/Awesome Icons/maximize2.png"
 theme.titlebar_maximized_button_focus_inactive  = "~/Pictures/Icons/Awesome Icons/maximize.png"
-theme.titlebar_maximized_button_normal_active = "~/Pictures/Icons/Awesome Icons/minimize.png"
+theme.titlebar_maximized_button_normal_active = "~/Pictures/Icons/Awesome Icons/minimize2.png"
 theme.titlebar_maximized_button_focus_active  = "~/Pictures/Icons/Awesome Icons/minimize.png"
 
 theme.wallpaper = "~/Pictures/Wallpapers/525233.jpg"

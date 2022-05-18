@@ -231,7 +231,7 @@ awful.tag.add("", {
 
 awful.tag.add("", {
     icon               = "/home/juicy/Pictures/Icons/Awesome Icons/spotify2.png",
-    layout             = awful.layout.suit.floating,
+    layout             = awful.layout.suit.tile,
     master_fill_policy = "expand",
     gap_single_client  = true,
     screen             = s,
@@ -321,7 +321,8 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey         }, "t", function () xrandr.xrandr() end,
+
+awful.key({ modkey         }, "t", function () xrandr.xrandr() end,
               {description = "change monitor config", group = "custom"}),
 
     awful.key({ modkey         }, ";", function () brightness_widget:inc() end,
@@ -355,6 +356,7 @@ globalkeys = gears.table.join(
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
+   
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
@@ -437,7 +439,10 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
+   
+    awful.key({ modkey, "Shift"   }, "t",function (c) awful.titlebar.toggle (c)                         end,
+              {description = "close", group = "client"}),
+awful.key({ modkey,           }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
