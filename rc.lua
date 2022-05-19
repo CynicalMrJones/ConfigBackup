@@ -420,7 +420,7 @@ awful.key({ modkey         }, "t", function () xrandr.xrandr() end,
     awful.key({ modkey },            "r",     function () awful.util.spawn("rofi -show run") end,
               {description = "run rofi", group = "launcher"}),
 
-    awful.key({ modkey },            "b",     function () awful.util.spawn("firefox") end,       
+    awful.key({ modkey },            "b",     function () awful.util.spawn("brave-browser") end,       
 	      {description = "run Firefox", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -602,7 +602,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
