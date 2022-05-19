@@ -230,6 +230,15 @@ awful.tag.add("", {
 })
 
 awful.tag.add("", {
+    icon               = "/home/juicy/Pictures/Icons/Awesome Icons/steam.png",
+    layout             = awful.layout.suit.tile,
+    master_fill_policy = "expand",
+    gap_single_client  = true,
+    screen             = s,
+    selected           = true,
+})
+
+awful.tag.add("", {
     icon               = "/home/juicy/Pictures/Icons/Awesome Icons/spotify2.png",
     layout             = awful.layout.suit.tile,
     master_fill_policy = "expand",
