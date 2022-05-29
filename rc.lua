@@ -304,6 +304,13 @@ awful.tag.add("", {
 		    size = 20,
 		    font = 'Hack Nerd Font Bold 8',
 	    }),
+	    wibox.widget({
+		    widget = wibox.widget.separator,
+		    orientation = 'vertical',
+		    border_width = 0,
+		    forced_width = 5,
+		    opacity = 0,
+	    }),
             brightness_widget({
                     type = 'icon_and_text',
                     program = 'light',
@@ -687,7 +694,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 --Startup Applications
 awful.spawn.with_shell("compton")
-awful.spawn.with_shell("nitrogen --restore")
 
 
 
