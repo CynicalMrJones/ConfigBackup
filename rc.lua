@@ -293,16 +293,21 @@ awful.tag.add("", {
 		    font = 'Hack Nerd Font Bold 10',
 		    max_length = 20,
             }),
-	   layout = wibox.layout.fixed.horizontal,
+	   
 	    batteryarc_widget({
+		    main_color = '#c2f8fa',
                     show_current_level = true,
                     arc_thickness = 2,
-                    charging_color = '#00ff00',
+                    charging_color = '#c2f8fa',
                     enable_battery_warning = true,
-                    bg_color = '#00ff00',
+                    bg_color = '#047b5ce',
 		    timeout = 8,
 		    size = 20,
 		    font = 'Hack Nerd Font Bold 8',
+		    warning_msg_icon = '/home/juicy/Pictures/Icons/Awesome Icons/aee.jpg',
+		    warning_msg_title = 'Senator Says',
+		    warning_msg_text = 'CHARGE THAT COMPUTER',
+		    warning_msg_position = 'top_right',
 	    }),
 	    wibox.widget({
 		    widget = wibox.widget.separator,
@@ -430,6 +435,8 @@ awful.key({ modkey         }, "t", function () xrandr.xrandr() end,
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
+    awful.key({ modkey, "Shift" },   "p",     function () awful.util.spawn("java -jar /home/juicy/Documents/PasswordManager.jar") end,
+              {description = "run Password manager", group = "launcher"}),
     awful.key({ modkey, "Shift" },   "r",     function () awful.spawn("xfce4-terminal".. " -e ranger")  end,
               {description = "run ranger", group = "launcher"}),
 
