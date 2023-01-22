@@ -11,21 +11,21 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "Hack Nerd Font Bold 9"
+theme.font          = "Hack Nerd Font Bold 10"
 
-theme.bg_normal     = "#47b5ce"
-theme.bg_focus      = "#c2f8fa"
+theme.bg_normal     = "#1d1c79"
+theme.bg_focus      = "#4949b9"
 theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#47b5ce"
+theme.bg_minimize   = "#1d1c79"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#07538f"
-theme.fg_focus      = "#07538f"
+theme.fg_normal     = "#c69df1"
+theme.fg_focus      = "#c69df1"
 theme.fg_urgent     = "#ff0000"
-theme.fg_minimize   = "#ffffff"
+theme.fg_minimize   = "#4949b9"
 
 theme.useless_gap   = dpi(5)
-theme.border_width  = dpi(2)
+theme.border_width  = dpi(3)
 theme.border_normal = "#000000"
 theme.border_focus  = "#0000ff"
 theme.border_marked = "#91231c"
@@ -98,7 +98,7 @@ theme.titlebar_maximized_button_focus_inactive  = "~/Pictures/Icons/Awesome Icon
 theme.titlebar_maximized_button_normal_active = "~/Pictures/Icons/Awesome Icons/minimize2.png"
 theme.titlebar_maximized_button_focus_active  = "~/Pictures/Icons/Awesome Icons/minimize.png"
 
-theme.wallpaper = "~/Pictures/Wallpapers/525233.jpg"
+theme.wallpaper = "~/Pictures/Wallpapers/Visor.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
@@ -130,3 +130,4 @@ theme.icon_theme = nil
 return theme
 
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
+
