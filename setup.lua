@@ -27,7 +27,6 @@ end
 local function setup()
     mkdir()
     copytime()
-
 end
 
 setup()
