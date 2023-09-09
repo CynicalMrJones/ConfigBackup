@@ -15,11 +15,11 @@ local function mkdir()
 end
 
 local function copytime()
-    os.execute("cp -v /alacritty/alacritty.yml " .. alacritty .. "/")
-    os.execute("cp -rv /awesome/* " .. awesome .. "/")
-    os.execute("cp -v /i3/config " .. i3 .. "/")
-    os.execute("cp -v /i3status/config " .. i3status .. "/")
-    os.execute("cp -rv /polybar/* " .. polybar .. "/")
+    os.execute("cp -v alacritty/alacritty.yml " .. alacritty .. "/")
+    os.execute("cp -rv awesome/* " .. awesome .. "/")
+    os.execute("cp -v i3/config " .. i3 .. "/")
+    os.execute("cp -v i3status/config " .. i3status .. "/")
+    os.execute("cp -rv polybar/* " .. polybar .. "/")
     os.execute("cp -v .bashrc " .. home .. "/")
 end
 
