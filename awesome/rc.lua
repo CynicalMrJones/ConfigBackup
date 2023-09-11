@@ -195,7 +195,7 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Each screen has its own tag table.
 	-- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9 " }, s, awful.layout.layouts[1])
 	awful.tag.add("", {
-		icon               = "/home/juicy/Pictures/Icons/Awesome Icons/firefox.png",
+		icon               = "/home/juicy/ConfigBackup/awesome/Icons/Awesome Icons/firefox.png",
 		layout             = awful.layout.suit.tile,
 		master_fill_policy = "expand",
 		gap_single_client  = true,
@@ -204,7 +204,7 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	awful.tag.add("", {
-		icon               = "/home/juicy/Pictures/Icons/Awesome Icons/terminals.png",
+		icon               = "/home/juicy/ConfigBackup/awesome/Icons/Awesome Icons/terminals.png",
 		layout             = awful.layout.suit.tile,
 		master_fill_policy = "expand",
 		gap_single_client  = true,
@@ -213,7 +213,7 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	awful.tag.add("", {
-		icon               = "/home/juicy/Pictures/Icons/Awesome Icons/folder.png",
+		icon               = "/home/juicy/ConfigBackup/awesome/Icons/Awesome Icons/folder.png",
 		layout             = awful.layout.suit.tile,
 		master_fill_policy = "expand",
 		gap_single_client  = true,
@@ -222,7 +222,7 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	awful.tag.add("", {
-		icon               = "/home/juicy/Pictures/Icons/Awesome Icons/archive.png",
+		icon               = "/home/juicy/ConfigBackup/awesome/Icons/Awesome Icons/archive.png",
 		layout             = awful.layout.suit.tile,
 		master_fill_policy = "expand",
 		gap_single_client  = true,
@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	awful.tag.add("", {
-		icon               = "/home/juicy/Pictures/Icons/Awesome Icons/steam.png",
+		icon               = "/home/juicy/ConfigBackup/awesome/Icons/Awesome Icons/steam.png",
 		layout             = awful.layout.suit.tile,
 		master_fill_policy = "expand",
 		gap_single_client  = true,
@@ -240,7 +240,7 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	awful.tag.add("", {
-		icon               = "/home/juicy/Pictures/Icons/Awesome Icons/spotify2.png",
+		icon               = "/home/juicy/ConfigBackup/awesome/Icons/Awesome Icons/spotify2.png",
 		layout             = awful.layout.suit.tile,
 		master_fill_policy = "expand",
 		gap_single_client  = true,
@@ -321,7 +321,7 @@ awful.screen.connect_for_each_screen(function(s)
 		timeout = 8,
 		size = 20,
 		font = 'Hack Nerd Font Bold 8',
-		warning_msg_icon = '/home/juicy/Pictures/Icons/Awesome Icons/aee.jpg',
+		warning_msg_icon = '/home/juicy/ConfigBackup/awesome/Icons/Awesome Icons/aee.jpg',
 		warning_msg_title = 'Senator Says',
 		warning_msg_text = 'CHARGE THAT COMPUTER',
 		warning_msg_position = 'top_right',
