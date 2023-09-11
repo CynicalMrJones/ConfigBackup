@@ -15,7 +15,6 @@ local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batterya
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local wibox = require("wibox")
 local separator = wibox.widget.textbox()
-local xrandr = require("xrandr")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -388,8 +387,6 @@ awful.button({ }, 5, awful.tag.viewprev)
 -- {{{ Key bindings
 globalkeys = gears.table.join(
 
-awful.key({ modkey         }, "t", function () xrandr.xrandr() end,
-{description = "change monitor config", group = "custom"}),
 
 awful.key({ modkey         }, ";", function () brightness_widget:inc() end,
 {description = "increase brightness", group = "custom"}),
