@@ -9,7 +9,7 @@ local polybar = home .. "/.config/polybar"
 
 local function installer()
     os.execute("sudo apt update && sudo apt upgrade")
-    os.execute("sudo apt install awesome i3 polybar vim bashtop htop rofi ranger alacritty")
+    os.execute("sudo apt install awesome i3 polybar vim bashtop htop rofi ranger alacritty nitrogen picom nautilus")
 end
 
 local function mkdir()
