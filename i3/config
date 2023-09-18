@@ -56,6 +56,9 @@ bindsym $mod+b exec brave-browser
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+#start music player
+bindsym $mod+m exec alacritty -e cmus 
+
 # kill focused window
 bindsym $mod+Shift+c kill
 
