@@ -745,6 +745,6 @@ layout = wibox.layout.align.horizontal
   -- }}}
 
   --Startup Applications
- awful.spawn.with_shell("compton")
+ awful.spawn.with_shell("picom")
 
 
