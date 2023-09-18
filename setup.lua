@@ -13,7 +13,7 @@ local function installer()
     os.execute("sudo apt update && sudo apt upgrade")
     os.execute("sudo apt install awesome i3 polybar vim bashtop htop rofi ranger alacritty nitrogen picom nautilus npm brave-browser")
     os.execute("cd && curl -sS https://starship.rs/install.sh | sh")
-    os.execute("git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git && cd pokemon-colorscripts && sudo ./install.sh")
+    os.execute("cd && git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git && cd pokemon-colorscripts && sudo ./install.sh")
     os.execute("cd ConfigBackup")
 end
 
