@@ -51,6 +51,8 @@ local function menu()
     elseif answer == 3 then
         mkdir()
         copytime()
+    elseif answer == 4 then
+        os.execute("exit")
     else
         os.execute("exit")
     end
