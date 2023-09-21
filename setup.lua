@@ -36,11 +36,13 @@ end
 
 local function menu()
     os.execute("clear")
-    print("What would you like to do?")
-    print("1) Update .config files from ConfigBackup folder")
-    print("2) Create the folders in .config and update them from latest ConfigBackup folder")
-    print("3) Run installer for Debian based systems")
-    print("4) Exit Program")
+    print(" ----------------------------------------------------------------------------------- ")
+    print("|  What would you like to do?                                                       |")
+    print("|  1) Update .config files from ConfigBackup folder                                 |")
+    print("|  2) Create the folders in .config and update them from latest ConfigBackup folder |")
+    print("|  3) Run installer for Debian based systems                                        |")
+    print("|  4) Exit Program                                                                  |")
+    print(" ----------------------------------------------------------------------------------- ")
     local answer = io.read("*n")
     if answer == 1 then
         copytime()
