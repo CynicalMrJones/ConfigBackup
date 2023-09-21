@@ -1,4 +1,5 @@
 
+
 local function videoDownload()
     print("What is the URL of the video?:")
     local answer = io.read()
@@ -33,10 +34,12 @@ end
 
 function Menu()
     os.execute("clear")
-    print("What would you like to do?:")
-    print("1) Download Video with audio")
-    print("2) Download just the audio")
-    print("3) Exit Program")
+    print(" -------------------------------")
+    print("|  What would you like to do?:  |")
+    print("|  1) Download Video with audio |")
+    print("|  2) Download just the audio   |")
+    print("|  3) Exit Program              |")
+    print(" -------------------------------")
     local answer = io.read()
     if answer == "1" then
         videoDownload()
