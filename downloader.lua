@@ -46,10 +46,8 @@ function Menu()
     elseif answer == "2" then
         audioDownload()
     elseif answer == "3" then
-        os.execute("clear")
         os.execute("exit")
     else
-        os.execute("clear")
         os.execute("exit")
     end
 end
