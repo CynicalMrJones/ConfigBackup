@@ -46,11 +46,11 @@ local function menu()
     local answer = io.read("*n")
     if answer == 1 then
         copytime()
-    elseif answer == 3 then
-        installer()
+    elseif answer == 2 then
         mkdir()
         copytime()
-    elseif answer == 2 then
+    elseif answer == 3 then
+        installer()
         mkdir()
         copytime()
     elseif answer == 4 then
