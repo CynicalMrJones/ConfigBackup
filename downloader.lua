@@ -3,7 +3,7 @@
 local function videoDownload()
     print("What is the URL of the video?:")
     local answer = io.read()
-    os.execute("yt-dlp " .. answer .. " -P ~/Music/NewMusic/")
+    os.execute("yt-dlp " .. answer .. " -P ~/Music/")
     print("Would you like do download another? [y/N]")
     local another = io.read()
     if another.lower(another) == "y" then
@@ -19,7 +19,7 @@ end
 local function audioDownload()
     print("What is the URL of the video?:")
     local answer = io.read()
-    os.execute("yt-dlp -x " .. answer .. " -P ~/Music/NewMusic/")
+    os.execute("yt-dlp -x " .. answer .. " -P ~/Music/")
     print("Would you like do download another? [y/N]")
     local another = io.read()
     if another.lower(another) == "y" then
