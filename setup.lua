@@ -34,6 +34,15 @@ local function copytime()
     os.execute("cp -v .bashrc " .. home .. "/")
 end
 
+local function reversecopy()
+    os.execute("cp -v " .. home .. "/.config/alacritty/alacritty.yml " .. home .. "/ConfigBackup/alacritty/")
+    os.execute("cp -rv " .. home .. "/.config/awesome/* " .. home .. "/ConfigBackup/awesome/")
+    os.execute("cp -v " .. home .. "/.config/i3/config " .. home .. "/ConfigBackup/i3/")
+    os.execute("cp -v " .. home .. "/.config/i3status/config " .. home .. "/ConfigBackup/i3status/")
+    os.execute("cp -rv " .. home .. "/.config/polybar/* " .. home .. "/ConfigBackup/polybar/")
+    os.execute("cp -v  " .. home .. "/.bashrc " .. home .. "/ConfigBackup/")
+end
+
 local function menu()
     os.execute("clear")
     print(" ----------------------------------------------------------------------------------- ")
@@ -41,7 +50,8 @@ local function menu()
     print("|  1) Update .config files from ConfigBackup folder                                 |")
     print("|  2) Create the folders in .config and update them from latest ConfigBackup folder |")
     print("|  3) Run installer for Debian based systems                                        |")
-    print("|  4) Exit Program                                                                  |")
+    print("|  4) Copy files from .config to ConfigBackup                                       |")
+    print("|  5) Exit Program                                                                  |")
     print(" ----------------------------------------------------------------------------------- ")
     local answer = io.read("*n")
     if answer == 1 then
@@ -54,7 +64,8 @@ local function menu()
         mkdir()
         copytime()
     elseif answer == 4 then
-        os.execute("exit")
+        reversecopy()
+    elseif answer == 5 then
     else
         os.execute("exit")
     end
