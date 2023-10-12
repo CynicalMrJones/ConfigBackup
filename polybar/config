@@ -151,8 +151,9 @@ label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 
 [module/wlan]
 inherit = network-base
+interface = wlp8s0 
 interface-type = wireless
-label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
+label-connected = %essid% %local_ip%
 
 [module/eth]
 inherit = network-base
