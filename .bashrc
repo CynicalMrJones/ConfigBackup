@@ -127,4 +127,4 @@ alias s='xrandr -s 1920x1080'
 
 export VISUAL=nvim;
 export EDITOR=nvim;
-export PATH=$PATH:/home/juicy/Documents/
+export PATH=$PATH:/home/juicy/Documents/scripts
