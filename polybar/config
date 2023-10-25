@@ -17,17 +17,17 @@
 ;==========================================================
 
 [colors]
-background = #282A2E
+background = #2f3237
 background-alt = #373B41
 foreground = #C5C8C6
-primary = #66CCFF
+primary = #3dbeff
 secondary = #8ABEB7
 alert = #A54242
 disabled = #707880
 
 [bar/mybar]
 width = 100%
-height = 24pt
+height = 25pt
 radius = 6
 
 ; dpi = 96
@@ -60,7 +60,7 @@ enable-ipc = true
 
 ; wm-restack = generic
 ; wm-restack = bspwm
-; wm-restack = i3
+ wm-restack = i3
 
 ; override-redirect = true
 
@@ -153,10 +153,11 @@ label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 inherit = network-base
 interface = wlp8s0 
 interface-type = wireless
-label-connected = %essid% %local_ip%
+label-connected = %{F#3dbeff}%essid%%{F-} %local_ip%
 
 [module/eth]
 inherit = network-base
+interface = eno1 
 interface-type = wired
 label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
 
