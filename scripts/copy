@@ -1,0 +1,3 @@
+#!/bin/bash
+cat ~/Documents/PersonalToken2.txt | xclip -selection clipboard 
+

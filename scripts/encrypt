@@ -1,0 +1,10 @@
+#!/bin/bash
+
+file="$1"
+filename=$(echo $file | tr -d '/')
+
+tar czf $filename.tar.gz $file
+rm -r $file
+
+gpgtar -e --symmetric --output $filename.encrypt $filename.tar.gz
+rm $filename.tar.gz

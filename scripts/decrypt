@@ -1,0 +1,11 @@
+#!/bin/bash
+
+file="$1"
+filename=$(echo $file | sed 's/.encrypt//g')
+directory=$(pwd)/
+
+gpgtar -d --directory $directory $file
+rm $file
+
+tar xzf $filename.tar.gz
+rm $filename.tar.gz
