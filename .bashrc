@@ -123,8 +123,8 @@ eval "$(starship init bash)"
 # Custom Alias
 alias clear='clear && pokemon-colorscripts -r'
 alias aptup='sudo apt update && sudo apt upgrade'
-alias s='xrandr -s 1920x1080'
 
 export VISUAL=nvim;
 export EDITOR=nvim;
 export PATH=$PATH:/home/juicy/Documents/scripts
+. "$HOME/.cargo/env"
