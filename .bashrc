@@ -126,5 +126,5 @@ alias aptup='sudo apt update && sudo apt upgrade'
 
 export VISUAL=nvim;
 export EDITOR=nvim;
-export PATH=$PATH:/home/juicy/Documents/scripts
+export PATH=$PATH:$HOME/Documents/scripts
 . "$HOME/.cargo/env"
