@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This is a very bad decryption script to work with the very bad encryption script
+
 file="$1"
 filename=$(echo $file | sed 's/.encrypt//g')
 directory=$(pwd)/
