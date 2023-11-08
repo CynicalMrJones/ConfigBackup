@@ -5,6 +5,7 @@ local awesome = home .. "/.config/awesome"
 local i3 = home .. "/.config/i3"
 local i3status = home .. "/.config/i3status"
 local polybar = home .. "/.config/polybar"
+local scripts = home .. "/Documents/scripts"
 
 
 local function installer()
@@ -23,6 +24,7 @@ local function mkdir()
    os.execute("mkdir " .. i3)
    os.execute("mkdir " .. i3status)
    os.execute("mkdir " .. polybar)
+   os.execute("mkdir " .. scripts)
 end
 
 local function copytime()
@@ -32,6 +34,7 @@ local function copytime()
     os.execute("cp -v i3status/config " .. i3status .. "/")
     os.execute("cp -rv polybar/* " .. polybar .. "/")
     os.execute("cp -v .bashrc " .. home .. "/")
+    os.execute("cp -rv scripts/* " .. scripts .. "/")
 end
 
 local function reversecopy()
@@ -41,6 +44,7 @@ local function reversecopy()
     os.execute("cp -v " .. home .. "/.config/i3status/config " .. home .. "/ConfigBackup/i3status/")
     os.execute("cp -rv " .. home .. "/.config/polybar/* " .. home .. "/ConfigBackup/polybar/")
     os.execute("cp -v  " .. home .. "/.bashrc " .. home .. "/ConfigBackup/")
+    os.execute("cp -rv " .. home .. "/Documents/scripts/* " .. home .. "/ConfigBackup/scripts/")
 end
 
 local function menu()
