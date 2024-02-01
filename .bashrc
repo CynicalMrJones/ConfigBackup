@@ -128,3 +128,4 @@ export VISUAL=nvim;
 export EDITOR=nvim;
 export PATH=$PATH:$HOME/Documents/scripts
 . "$HOME/.cargo/env"
+export PATH=$PATH:"$HOME/.local/bin"
