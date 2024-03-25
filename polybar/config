@@ -91,7 +91,9 @@ label-empty-padding = 1
 
 [module/xwindow]
 type = internal/xwindow
+label-maxlen = 50 
 label = %title:0:60:...%
+
 
 [module/filesystem]
 type = internal/fs
