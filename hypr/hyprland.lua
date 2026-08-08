@@ -36,7 +36,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "alacritty"
-local fileManager = "dolphin"
+local fileManager = "nautilus"
 local menu        = "rofi -show run"
 
 
@@ -278,14 +278,14 @@ hl.bind(ss .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("spotify-launcher"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(ss .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(ss .. " + d", hl.dsp.exec_cmd("discord"))
 hl.bind(ss .. " + m", hl.dsp.exec_cmd("flatpak run org.jellyfin.JellyfinDesktop"))
 hl.bind(mainMod .. " + g", hl.dsp.exec_cmd("flatpak run org.DolphinEmu.dolphin-emu"))
-hl.bind(ss .. " + g", hl.dsp.exec_cmd("grim -g '$(slurp)' - | swappy -f -"))
+hl.bind(ss .. " + f", hl.dsp.exec_cmd("flameshot gui"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + j",  hl.dsp.focus({ direction = "left" }))
@@ -293,12 +293,18 @@ hl.bind(mainMod .. " + code:47", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + k",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + l",  hl.dsp.focus({ direction = "down" }))
 
+-- Move window within workspace
+hl.bind(ss .. " + j", hl.dsp.window.move({ direction = "left"}))
+hl.bind(ss .. " + code:47", hl.dsp.window.move({ direction = "right"}))
+hl.bind(ss .. " + k", hl.dsp.window.move({ direction = "up"}))
+hl.bind(ss .. " + l", hl.dsp.window.move({ direction = "down"}))
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind(ss .. " + " ..key,     hl.dsp.window.move({ workspace = i }))
 end
 
 -- Set workspace to monitor
