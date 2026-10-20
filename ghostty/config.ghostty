@@ -1,0 +1,12 @@
+font-size = 18
+font-family = DepartureMono Nerd Font
+background-blur = macos-glass-regular
+background-opacity = 0.8
+cursor-color = #ffffff
+cursor-style = block 
+palette = 2=#35904C
+shell-integration = zsh
+theme = Argonaut
+cursor-text = #000000
+cursor-style-blink = false
+shell-integration-features = no-cursor
