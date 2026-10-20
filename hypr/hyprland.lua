@@ -19,7 +19,8 @@ hl.monitor({
     output   = "DP-1",
     mode     = "highres",
     position = "1920x0",
-    scale    = "1",
+    scale    = "1.25",
+    vrr      =  1
 })
 
 hl.monitor({
@@ -30,12 +31,13 @@ hl.monitor({
 })
 
 
+
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
 
 -- Set programs that you use
-local terminal    = "alacritty"
+local terminal    = "ghostty"
 local fileManager = "nautilus"
 local menu        = "rofi -show run"
 
@@ -98,7 +100,7 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)"}},
+            active_border   = { colors = {"#ce7688"}},
             inactive_border = "rgba(595959aa)",
         },
 
@@ -109,6 +111,10 @@ hl.config({
         allow_tearing = false,
 
         layout = "dwindle",
+    },
+
+    xwayland = {
+        force_zero_scaling = true
     },
 
     decoration = {
@@ -192,8 +198,13 @@ hl.window_rule({
 
 hl.window_rule({
     name = "discord-workspace",
-    match = {class = "^(discord)$"},
+    match = {class = "^(vesktop)$"},
     workspace = "8"
+})
+hl.window_rule({
+    name = "flameshot",
+    match = {class = "^(flameshot)$"},
+    float = true
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
@@ -261,7 +272,7 @@ hl.gesture({
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
     name        = "compx-lamzu-4k-receiver-1",
-    sensitivity = -0.5,
+    sensitivity = -0.6,
 })
 
 
@@ -282,7 +293,7 @@ hl.bind(ss .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
-hl.bind(ss .. " + d", hl.dsp.exec_cmd("discord"))
+hl.bind(ss .. " + d", hl.dsp.exec_cmd("vesktop"))
 hl.bind(ss .. " + m", hl.dsp.exec_cmd("flatpak run org.jellyfin.JellyfinDesktop"))
 hl.bind(mainMod .. " + g", hl.dsp.exec_cmd("flatpak run org.DolphinEmu.dolphin-emu"))
 hl.bind(ss .. " + f", hl.dsp.exec_cmd("flameshot gui"))
@@ -360,6 +371,7 @@ local suppressMaximizeRule = hl.window_rule({
     suppress_event = "maximize",
 })
 -- suppressMaximizeRule:set_enabled(false)
+--
 
 hl.window_rule({
     -- Fix some dragging issues with XWayland
@@ -392,3 +404,4 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
